@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+<t t-name="hacking_web.WebClient">
+    <h1>Web Client</h1>
+</t>
+
+</templates>

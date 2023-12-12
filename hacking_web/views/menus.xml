@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hacking_web.action_url" model="ir.actions.act_url">
+        <field name="name">Hacking Web</field>
+        <field name="url">/hacking_web/web</field>
+        <field name="target">self</field>
+    </record>
+
+    <record id="action_pos_ir_fronted_display" model="ir.actions.server">
+        <field name="name">Hacking Web</field>
+        <field name="model_id" ref="model_ir_frontend"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = env.ref('hacking_web.action_url').sudo().read()[0]
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_root_app"
+            name="Hacking Owl App"
+            sequence="51"
+            action="hacking_web.action_pos_ir_fronted_display"/>
+
+</odoo>
